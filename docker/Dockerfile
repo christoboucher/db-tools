@@ -8,4 +8,8 @@ RUN apt-get install -y ./mongodb-database-tools-ubuntu2204-x86_64-100.7.4.deb ./
 
 RUN apt-get clean && apt-get autoremove --yes && rm -rf /var/lib/apt/lists/*
 
+COPY ./backup_cron /etc/cron.d/backup_cron
+
+RUN chmod 0644 /etc/cron.d/backup_cron
+
 ENTRYPOINT ["cron","-f"]
