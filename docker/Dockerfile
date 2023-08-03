@@ -1,6 +1,6 @@
 FROM ubuntu
 
-RUN apt-get update && apt-get install -y cron wget mysql-client ssh
+RUN apt-get update && apt-get install -y cron wget mysql-client ssh nano iputils-ping xz-utils
 
 RUN wget https://fastdl.mongodb.org/tools/db/mongodb-database-tools-ubuntu2204-x86_64-100.7.4.deb && wget https://downloads.mongodb.com/compass/mongodb-mongosh_1.10.3_amd64.deb
 
